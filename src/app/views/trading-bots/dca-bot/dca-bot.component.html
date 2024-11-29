@@ -1,0 +1,119 @@
+<div class="mt-4">
+    <c-card class="shadow-lg">
+        <c-card-header>
+            <h1 class="text-lg font-bold">DCA Bot</h1>
+        </c-card-header>
+        <c-card-body>
+            <c-nav variant="pills">
+                <c-nav-item>
+                    <a [cTabContent]="tab" [routerLink] [tabPaneIdx]="0" class="text-sm" cNavLink>
+                        Create your bot
+                    </a>
+                </c-nav-item>
+                <c-nav-item>
+                    <a [cTabContent]="tab" [routerLink] [tabPaneIdx]="1" class="text-sm" cNavLink>
+                        Configured bots
+                    </a>
+                </c-nav-item>
+            </c-nav>
+
+            <c-tab-content #tab="cTabContent" cRounded="bottom" [activeTabPaneIdx]="0" class="mt-2">
+                <c-tab-pane aria-labelledby="docs-code-preview" class="preview" role="tabpanel">
+                    <form [formGroup]="formBot">
+                        <c-row>
+                            <c-col xs="12" sm="12" md="12" lg="6">
+                                <label class="text-sm font-bold mt-2">Bot name</label>
+                                <input type="text" class="form-control text-sm" />
+                                <label class="text-sm font-bold mt-2">Select Exchange</label>
+                                <input type="text" class="form-control text-sm" />
+                                <label class="text-sm font-bold mt-2">Select Pair</label>
+                                <input type="text" class="form-control text-sm" />
+
+                                <label class="text-sm font-bold mt-2 w-full">Order Side</label>
+                                <c-button-group aria-label="Basic radio toggle button group" class="w-full text-sm"
+                                    role="group">
+                                    <input class="btn-check text-sm" formControlName="orderSide" type="radio"
+                                        value="Buy" />
+                                    <label (click)="setOrderSide('Buy')" cButton cFormCheckLabel variant="outline"
+                                        class="text-sm w-1/2">BUY</label>
+
+                                    <input class="btn-check text-sm" formControlName="orderSide" type="radio"
+                                        value="Sell" />
+                                    <label (click)="setOrderSide('Sell')" cButton cFormCheckLabel variant="outline"
+                                        class="text-sm w-1/2">SELL</label>
+                                </c-button-group>
+
+                                <label class="text-sm font-bold mt-2 w-full">Order Type</label>
+                                <c-button-group aria-label="Basic radio toggle button group" class="w-full text-sm"
+                                    role="group">
+                                    <input class="btn-check text-sm" formControlName="orderType" type="radio"
+                                        value="Market" />
+                                    <label (click)="setOrderType('Market')" cButton cFormCheckLabel variant="outline"
+                                        class="text-sm w-1/2">Market</label>
+
+                                    <input class="btn-check text-sm" formControlName="orderType" type="radio"
+                                        value="Limit" />
+                                    <label (click)="setOrderType('Limit')" cButton cFormCheckLabel variant="outline"
+                                        class="text-sm w-1/2">Limit</label>
+                                </c-button-group>
+                            </c-col>
+                            <c-col xs="12" sm="12" md="12" lg="6">
+                                <label class="text-sm font-bold mt-2">Order Amount</label>
+                                <input type="number" class="form-control text-sm" />
+                                <span class="text-sm mt-4">Minimum and Maximum Prices for each other</span>
+
+                                <div class="flex gap-3">
+                                    <div>
+                                        <label class="text-sm font-bold">Min Price</label>
+                                        <input type="number" class="form-control text-sm" />
+                                    </div>
+                                    <div>
+                                        <label class="text-sm font-bold">Max Price</label>
+                                        <input type="number" class="form-control text-sm" />
+                                    </div>
+                                </div>
+
+                                <label class="text-sm font-bold mt-2 w-full">Signal Type</label>
+                                <c-button-group aria-label="Basic radio toggle button group" class="w-full text-sm"
+                                    role="group">
+                                    <input class="btn-check text-sm" formControlName="signalType" type="radio"
+                                        value="Manual" />
+                                    <label (click)="setSignalType('Manual')" cButton cFormCheckLabel variant="outline"
+                                        class="text-sm w-1/2">Manual</label>
+
+                                    <input class="btn-check text-sm" formControlName="signalType" type="radio"
+                                        value="TradingView" />
+                                    <label (click)="setSignalType('TradingView')" cButton cFormCheckLabel
+                                        variant="outline" class="text-sm w-1/2">TradingView</label>
+                                </c-button-group>
+
+                                <div class="flex gap-3 mt-2">
+                                    <div>
+                                        <label class="text-sm font-bold">Max Trade Count</label>
+                                        <input type="number" class="form-control text-sm" />
+                                    </div>
+                                    <div>
+                                        <label class="text-sm font-bold">Trading Interval</label>
+                                        <input type="number" class="form-control text-sm" />
+                                    </div>
+                                </div>
+                                <button class="w-full mt-4 bg-primary text-white text-sm py-2 rounded-md">Create
+                                    Bot</button>
+                            </c-col>
+                        </c-row>
+                    </form>
+                </c-tab-pane>
+                <c-tab-pane aria-labelledby="docs-code-preview" class="preview" role="tabpanel">
+                    This is some placeholder content the <strong>Profile</strong> tab's associated content.
+                    Clicking
+                    another
+                    tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
+                    control
+                    the
+                    content visibility and styling. You can use it with tabs, pills, and any other .nav-powered
+                    navigation.
+                </c-tab-pane>
+            </c-tab-content>
+        </c-card-body>
+    </c-card>
+</div>

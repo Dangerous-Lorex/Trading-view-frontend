@@ -1,0 +1,99 @@
+<div class="mx-3 my-4">
+    <h1 class="text-lg font-bold">Smart Trades</h1>
+    <c-row class="w-full">
+        <c-col xs="12" sm="12" md="12" lg="8" xl="8">
+            <c-chart [data]="mainChart.data" [height]="350" [ngStyle]="{ 'marginTop.px': 40 }"
+                [options]="mainChart.options" [type]="mainChart.type">
+                Main chart
+            </c-chart>
+            <c-row class="text-center mt-2" [lg]="3" [md]="3" [sm]="2" [xs]="2">
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">Main</div>
+                    <p class="text-sm">Average (40%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar color="success" value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">Raw</div>
+                    <p class="text-sm">Original value (20%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar color="info" value="20"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">XASSET</div>
+                    <p class="text-sm">Multi assets (60%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar color="warning" value="60"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">Volumn</div>
+                    <p class="text-sm">Volumn Calculation (80%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar color="danger" value="80"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">CAPM</div>
+                    <p class="text-sm">Capital Management (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">CORRAN</div>
+                    <p class="text-sm">Correlation Analysis (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">MARKAN</div>
+                    <p class="text-sm">Mark Analysis (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">MEANREV</div>
+                    <p class="text-sm">Capital Management (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">NEWS</div>
+                    <p class="text-sm">News Sentiment (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">RISK</div>
+                    <p class="text-sm">Rist Reward Ratio (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+                <c-col class="mb-sm-2 mb-0">
+                    <div class="text-medium-emphasis font-bold text-sm">SEAS</div>
+                    <p class="text-sm">Seasonal detector (40.15%)</p>
+                    <c-progress class="mt-2" thin>
+                        <c-progress-bar value="40"></c-progress-bar>
+                    </c-progress>
+                </c-col>
+            </c-row>
+        </c-col>
+        <c-col xs="12" sm="12" md="12" lg="4" xl="4">
+            <section-component></section-component>
+        </c-col>
+    </c-row>
+    <c-row>
+
+        <c-col xs="12" sm="12" md="12" lg="8" xl="8">
+           
+        </c-col>
+    </c-row>
+</div>

@@ -1,0 +1,98 @@
+<div class="mx-3 my-4">
+    <h1 class="text-lg font-bold">Terminal Trades</h1>
+    <form class="flex gap-3 mt-2">
+        <div>
+            <label class="text-sm font-bold">Account</label>
+            <input type="text" class="form-control text-sm" />
+        </div>
+        <div>
+            <label class="text-sm font-bold">Market</label>
+            <input type="number" class="form-control text-sm" />
+        </div>
+        <div>
+            <label class="text-sm font-bold">Pair</label>
+            <input type="number" class="form-control text-sm" />
+        </div>
+    </form>
+    <c-row>
+        <c-col xs="12" sm="12" md="12" lg="8" xl="8" class="mt-4">
+            <app-trading-view-chart></app-trading-view-chart>
+        </c-col>
+        <c-col xs="12" sm="12" md="12" lg="4" xl="4">
+            <form [formGroup]="formTerminalTrade">
+                <label class="text-sm font-bold">ETH/BTC</label>
+                <c-button-group aria-label="Basic radio toggle button group" class="w-full text-sm mt-2" role="group">
+                    <input class="btn-check text-sm" formControlName="orderType" type="radio" value="Market" />
+                    <label cButton cFormCheckLabel variant="outline" (click)="setOrderType('Market')">Market</label>
+                    <input class="btn-check text-sm" formControlName="orderType" type="radio" value="Limit" />
+                    <label cButton cFormCheckLabel variant="outline" (click)="setOrderType('Limit')">Limit</label>
+                </c-button-group>
+
+                <div class="flex gap-3 mt-2">
+                    <div>
+                        <label class="text-sm font-bold">Units</label>
+                        <input type="number" class="form-control text-sm" />
+                    </div>
+                    <div>
+                        <label class="text-sm font-bold">Total</label>
+                        <input type="number" class="form-control text-sm" />
+                    </div>
+                </div>
+
+                <c-button-group aria-label="Basic radio toggle button group" class="w-full text-sm mt-2" role="group">
+                    <input class="btn-check text-sm" formControlName="sizeBalance" type="radio" value="100" />
+                    <label (click)="setSizeBalance('100')" cButton cFormCheckLabel variant="outline"
+                        class="text-sm w-1/5">100%</label>
+
+                    <input class="btn-check text-sm" formControlName="sizeBalance" type="radio" value="10" />
+                    <label (click)="setSizeBalance('10')" cButton cFormCheckLabel variant="outline"
+                        class="text-sm w-1/5">10%</label>
+
+                    <input class="btn-check text-sm" formControlName="sizeBalance" type="radio" value="25" />
+                    <label (click)="setSizeBalance('25')" cButton cFormCheckLabel variant="outline"
+                        class="text-sm w-1/5">25%</label>
+
+                    <input class="btn-check text-sm" formControlName="sizeBalance" type="radio" value="50" />
+                    <label (click)="setSizeBalance('50')" cButton cFormCheckLabel variant="outline"
+                        class="text-sm w-1/5">50%</label>
+
+                    <input class="btn-check text-sm" formControlName="sizeBalance" type="radio" value="75" />
+                    <label (click)="setSizeBalance('75')" cButton cFormCheckLabel variant="outline"
+                        class="text-sm w-1/5">75%</label>
+                </c-button-group>
+
+                <div class="flex gap-3 mt-2 w-full">
+                    <button class="bg-primary text-white py-2 text-sm rounded-md mt-3 w-full">Buy</button>
+                    <button class="bg-danger text-white py-2 text-sm rounded-md mt-3 w-full">Sell</button>
+                </div>
+            </form>
+        </c-col>
+    </c-row>
+
+    <h2 class="text-md font-bold mt-4">Order Summaries</h2>
+    <c-nav variant="pills" class="mt-2">
+        <c-nav-item>
+            <a [cTabContent]="tab" [routerLink] [tabPaneIdx]="0" class="text-sm" cNavLink>
+                Active Orders
+            </a>
+        </c-nav-item>
+        <c-nav-item>
+            <a [cTabContent]="tab" [routerLink] [tabPaneIdx]="1" class="text-sm" cNavLink>
+                Order History
+            </a>
+        </c-nav-item>
+    </c-nav>
+    <c-tab-content #tab="cTabContent" cRounded="bottom" [activeTabPaneIdx]="0" class="mt-6">
+        <c-tab-pane aria-labelledby="docs-code-preview" class="preview" role="tabpanel">
+
+        </c-tab-pane>
+        <c-tab-pane aria-labelledby="docs-code-preview" class="preview" role="tabpanel">
+            <div class="flex gap-3">
+                <div>
+                    <label class="text-sm font-bold">Accasdasdount</label>
+                    <input type="text" class="form-control text-sm" />
+                </div>
+            </div>
+        </c-tab-pane>
+    </c-tab-content>
+</div>

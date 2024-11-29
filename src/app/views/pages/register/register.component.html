@@ -1,0 +1,97 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col lg="7" md="9" xl="6">
+        <c-card class="mx-4">
+          <c-card-body class="p-4">
+            <form cForm [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="flex flex-row justify-content-between">
+                <img src="assets/images/logo.png" class="w-[55px]" alt="logo" />
+                <p class="text-right text-center text-sm">Already have an account?
+                  <a routerLink="/login" class="text-blue-500 hover:text-blue-500 underline">Login</a>
+                </p>
+              </div>
+              <h2 class="text-3xl font-bold">Welcome to our platform</h2>
+              <p class="text-md mt-1">Create your account</p>
+              <c-input-group class="mt-3 mt-2">
+                <span cInputGroupText>
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input autoComplete="name" cFormControl formControlName="username" placeholder="Username" />
+              </c-input-group>
+              <div *ngIf="registerForm.get('username')?.invalid && submitted" class="text-danger">
+                <small *ngIf="registerForm.get('username')?.errors?.['required']">Username is required.</small>
+              </div>
+              <c-input-group class="mt-3">
+                <span cInputGroupText>&#64;</span>
+                <input autoComplete="email" cFormControl formControlName="email" placeholder="Email"/>
+              </c-input-group>
+              <div *ngIf="registerForm.get('email')?.invalid && submitted" class="text-danger">
+                <small *ngIf="registerForm.get('email')?.errors?.['email']">Please enter a valid email address.</small>
+                <small *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</small>
+              </div>
+              <c-input-group class="mt-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input autoComplete="new-password" cFormControl formControlName="password" placeholder="Password"
+                  type="password" />
+              </c-input-group>
+              <div *ngIf="registerForm.get('password')?.invalid && submitted" class="text-danger">
+                <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</small>
+              </div>
+              <c-input-group class="mt-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input autoComplete="new-password" cFormControl formControlName="confirmPassword"
+                  placeholder="Repeat password" type="password" />
+              </c-input-group>
+              <div *ngIf="registerForm.get('confirmPassword')?.invalid && submitted" class="text-danger">
+                <small *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Confirm password is
+                  required.</small>
+              </div>
+              <div class="flex flex-row mt-3 w-full">
+                <span cInputGroupText class="rounded-tl-lg rounded-bl-lg rounded-br-none rounded-tr-none">
+                  <svg cIcon name="cilBuilding"></svg>
+                </span>
+                <app-autocomplete [options]="organization"
+                  (combinedValueChanged)="onCombinedValueChanged($event)" class="w-full"></app-autocomplete>
+              </div>
+              <div *ngIf="registerForm.get('organization')?.invalid && submitted" class="text-danger">
+                <small *ngIf="registerForm.get('organization')?.errors?.['required']">Organization is
+                  required.</small>
+              </div>
+              <c-input-group class="mt-4">
+                <div class="checkbox-wrapper-19">
+                  <label class="flex items-center gap-2">
+                    <input id="cbtest-19" type="checkbox" formControlName="isAdmin">
+                    <label class="check-box" for="cbtest-19">
+                    </label>
+                    I am Manager of the Organization
+                  </label>
+                </div>
+              </c-input-group>
+
+              <div class="d-grid mt-4">
+                <button cButton color="primary" class="fw-bold" type="submit">Create Account</button>
+              </div>
+              <hr class="my-4" />
+              <div class="d-flex flex-column gap-2 mt-2">
+                <button cButton (click)="signUpWithGoogle()"
+                  class="px-4 w-100 border-primary fw-bold position-relative bg-white hover:bg-gray-200 text-dark">
+                  <img src="assets/img/brand/google.svg" width="25" alt="Sign up with Google"
+                    style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);" />
+                  Sign up with Google
+                </button>
+              </div>
+            </form>
+          </c-card-body>
+        </c-card>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
+
+<app-notification [message]="notification?.message || null" [type]="getNotificationType()">
+</app-notification>

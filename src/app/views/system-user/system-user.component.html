@@ -1,0 +1,38 @@
+<div class="px-3 py-4">
+    <h4 class="text-xl font-bold">System Users</h4>
+    <table cTable class="mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Joined</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Balance</th>
+                <th scope="col">Bots Configured</th>
+                <th scope="col">Profit</th>
+                <th scope="col">Loss</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of userList">
+                <th scope="row" class="text-sm">{{item.createdAt | date: 'MMM d, y'}}</th>
+                <td class="text-sm font-bold">{{item.username}}</td>
+                <td class="text-sm font-bold">{{item.email.length > 15 ? (item.email | slice:0:15) + '...' : item.email}}</td>
+                <td class="text-sm font-bold">$1,250.00</td>
+                <td class="text-sm font-bold">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge bg-success rounded-full px-2">GRID 1</span>
+                        <span class="badge bg-primary rounded-full px-2">DCA 2</span>
+                    </div>
+                </td>
+                <td class="text-success text-sm font-bold">23.34%</td>
+                <td class="text-danger text-sm font-bold">12.23%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-4 flex items-center gap-3">
+        <span>Showing 6 out of 200</span>
+        <button class="rounded-md bg-[#d0e7fc] text-[#4b8ed8] border border-[#4b8ed8] px-3 py-1 text-sm">View Full
+            List</button>
+    </div>
+</div>

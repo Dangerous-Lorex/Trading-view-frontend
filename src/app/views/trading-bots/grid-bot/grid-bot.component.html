@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div class="row mt-[16px] w-full">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div class="mb-4 shadow-lg rounded-md">
+        <div class="p-3">
+          <h4 class="card-title mb-0 font-bold text-md" id="traffic">Traffic</h4>
+          <div class="small text-medium-emphasis">January - December 2021</div>
+        </div>
+        <div class="p-3">
+          <c-chart [data]="mainChart.data" [height]="350" [ngStyle]="{ 'marginTop.px': 40 }"
+            [options]="mainChart.options" [type]="mainChart.type">
+            Main chart
+          </c-chart>
+          <!-- <app-trading-view-chart></app-trading-view-chart> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      <div class="mb-4 shadow-lg rounded-md">
+        <div class="p-3">
+          <h4 class="card-title mb-0 font-bold text-md" id="traffic">GRID Bot</h4>
+        </div>
+        <div class="p-3">
+          <c-nav variant="pills">
+            <c-nav-item>
+              <a [cTabContent]="tab" [routerLink] [tabPaneIdx]="0" class="text-sm" cNavLink>
+                Create your bot
+              </a>
+            </c-nav-item>
+            <c-nav-item>
+              <a [cTabContent]="tab" [routerLink] [tabPaneIdx]="1" class="text-sm" cNavLink>
+                Configured bots
+              </a>
+            </c-nav-item>
+          </c-nav>
+          <c-tab-content #tab="cTabContent" cRounded="bottom" [activeTabPaneIdx]="0" class="mt-2">
+            <c-tab-pane aria-labelledby="docs-code-preview" class="preview" role="tabpanel">
+              <form [formGroup]="formBot">
+                <label class="text-sm font-bold mt-2">Bot name</label>
+                <input type="text" class="form-control text-sm" />
+                <label class="text-sm font-bold mt-2">Select Exchange</label>
+                <input type="text" class="form-control text-sm" />
+                <label class="text-sm font-bold mt-2">Select Pair</label>
+                <input type="text" class="form-control text-sm" />
+
+                <label class="text-sm font-bold mt-2 w-full">Order Type</label>
+                <c-button-group aria-label="Basic radio toggle button group" class="w-full text-sm" role="group">
+                  <input class="btn-check text-sm" formControlName="orderType" type="radio" value="Market" />
+                  <label (click)="setOrderType('Market')" cButton cFormCheckLabel variant="outline"
+                    class="text-sm">Market</label>
+
+                  <input class="btn-check text-sm" formControlName="orderType" type="radio" value="Limit" />
+                  <label (click)="setOrderType('Limit')" cButton cFormCheckLabel variant="outline"
+                    class="text-sm">Limit</label>
+                </c-button-group>
+                <label class="text-sm font-bold mt-2">Order Amount</label>
+                <input type="number" class="form-control text-sm" />
+                <button class="w-full mt-4 bg-primary text-white text-sm py-2 rounded-md">Create Bot</button>
+              </form>
+            </c-tab-pane>
+            <c-tab-pane aria-labelledby="docs-code-preview" class="preview" role="tabpanel">
+              This is some placeholder content the <strong>Profile</strong> tab's associated content. Clicking another
+              tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+              content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+            </c-tab-pane>
+          </c-tab-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

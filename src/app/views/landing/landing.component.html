@@ -1,0 +1,230 @@
+<nav class="w-full flex justify-between px-4 py-2 absolute top-0 z-10">
+    <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4">
+            <img src="assets/images/logo.png" class="w-[55px]" alt="logo" />
+        </div>
+        <div class="flex items-center gap-2">
+            <div class="relative px-3">
+                <a
+                    class="text-white hover:text-[#ff7700] font-bold text-lg hover:after:content-[''] hover:after:block hover:after:w-full hover:after:h-[2px] hover:after:bg-[#ff7700] hover:after:absolute hover:after:bottom-[-10px] hover:after:left-0 cursor-pointer" routerLink="/">Home</a>
+            </div>
+            <div class="relative px-3">
+                <a
+                    class="text-white hover:text-[#ff7700] font-bold text-lg hover:after:content-[''] hover:after:block hover:after:w-full hover:after:h-[2px] hover:after:bg-[#ff7700] hover:after:absolute hover:after:bottom-[-10px] hover:after:left-0 cursor-pointer">About</a>
+            </div>
+            <div class="relative px-3">
+                <a
+                    class="text-white hover:text-[#ff7700] font-bold text-lg hover:after:content-[''] hover:after:block hover:after:w-full hover:after:h-[2px] hover:after:bg-[#ff7700] hover:after:absolute hover:after:bottom-[-10px] hover:after:left-0 cursor-pointer">Services</a>
+            </div>
+            <div class="relative px-3">
+                <a
+                    class="text-white hover:text-[#ff7700] font-bold text-lg hover:after:content-[''] hover:after:block hover:after:w-full hover:after:h-[2px] hover:after:bg-[#ff7700] hover:after:absolute hover:after:bottom-[-10px] hover:after:left-0 cursor-pointer">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center gap-2">
+        <button class="border border-gray-300 px-4 py-2 text-white" routerLink="/login">Login</button>
+        <button class="border border-gray-300 px-4 py-2 bg-[#ff7700] text-white" routerLink="/register">Sign Up</button>
+    </div>
+</nav>
+<div class="w-full">
+    <div class="flex w-full bg-banner bg-cover bg-center bg-no-repeat relative">
+        <div class="container max-w-[990px]">
+            <div class="flex justify-center items-center h-full">
+                <div class="text-white text-center">
+                    <h1 class="text-5xl font-bold max-md:text-3xl">Trade Stocks, Forex, Crypto, and Commodities</h1>
+                    <div class="flex justify-center items-center gap-4 mt-4">
+                        <button class="w-[200px] py-2 bg-[#ff5722] text-white hover:bg-[#ee3900] rounded-sm">Trade
+                            Now</button>
+                        <button class="border border-gray-300 px-4 py-2 text-white rounded-sm">Free Practice
+                            Account</button>
+                    </div>
+                </div>
+                <div
+                    class="absolute bottom-0 w-full container h-[100px] text-center text-[#9b9b9b] max-md:text-xs px-[100px] max-md:px-[20px] max-lg:px-[20px]">
+                    * Information regarding past performance is not a reliable indicator of future performance. Leverage
+                    restrictions may apply depending on client's circumstances and/or jurisdiction.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container max-w-[990px]">
+        <div class="flex w-full gap-4 mt-5 lg:flex-row md:flex-col sm:flex-col flex-col lg:justify-center md:items-center sm:items-center lg:items-start md:items-start sm:items-start">
+            <div class="w-[100%] border p-4 border-gray-300 rounded-md lg:w-[50%] md:w-[80%] sm:w-[80%]">
+                <div class="w-full flex flex-row justify-between items-center">
+                    <div class="flex flex-row gap-4">
+                        <a class="font-bold cursor-pointer">Popular</a>
+                        <a class="font-bold cursor-pointer">New Listing</a>
+                    </div>
+                    <a class="cursor-pointer">View All 350+ coins></a>
+                </div>
+                <ul class="flex flex-col gap-3 mt-4">
+                    <li class="flex flex-row items-center justify-between gap-2">
+                        <div class="flex flex-row justify-between items-center w-[80%]">
+                            <div class="flex flex-row items-center gap-2">
+                                <img src="assets/images/bitcoin.png" class="w-[30px]" alt="bitcoin" />
+                                <p class="text-[16px] font-bold">BTC</p>
+                                <p class="text-[16px]">Bitcoin</p>
+                            </div>
+                            <p class="text-[16px] font-bold">$90,000.00</p>
+                        </div>
+                        <p class="text-red-500 font-bold">-0.32%</p>
+                    </li>
+                    <li class="flex flex-row items-center justify-between gap-2">
+                        <div class="flex flex-row justify-between items-center w-[80%]">
+                            <div class="flex flex-row items-center gap-2">
+                                <img src="assets/images/ether.png" class="w-[30px]" alt="bitcoin" />
+                                <p class="text-[16px] font-bold">ETH</p>
+                                <p class="text-[16px]">Ethereum</p>
+                            </div>
+                            <p class="text-[16px] font-bold">$3,156.73</p>
+                        </div>
+                        <p class="text-green-500 font-bold">+1.97%</p>
+                    </li>
+                    <li class="flex flex-row items-center justify-between gap-2">
+                        <div class="flex flex-row justify-between items-center w-[80%]">
+                            <div class="flex flex-row items-center gap-2">
+                                <img src="assets/images/bnb.png" class="w-[30px]" alt="bitcoin" />
+                                <p class="text-[16px] font-bold">BNB</p>
+                                <p class="text-[16px]">BNB</p>
+                            </div>
+                            <p class="text-[16px] font-bold">$626.39</p>
+                        </div>
+                        <p class="text-green-500 font-bold">+1.44%</p>
+                    </li>
+                    <li class="flex flex-row items-center justify-between gap-2">
+                        <div class="flex flex-row justify-between items-center w-[80%]">
+                            <div class="flex flex-row items-center gap-2">
+                                <img src="assets/images/xrp.png" class="w-[30px]" alt="bitcoin" />
+                                <p class="text-[16px] font-bold">XRP</p>
+                                <p class="text-[16px]">XRP</p>
+                            </div>
+                            <p class="text-[16px] font-bold">$1.13</p>
+                        </div>
+                        <p class="text-green-500 font-bold">+25.55%</p>
+                    </li>
+                    <li class="flex flex-row items-center justify-between gap-2">
+                        <div class="flex flex-row justify-between items-center w-[80%]">
+                            <div class="flex flex-row items-center gap-2">
+                                <img src="assets/images/sol.png" class="w-[30px] rounded-full" alt="bitcoin" />
+                                <p class="text-[16px] font-bold">SOL</p>
+                                <p class="text-[16px]">Solana</p>
+                            </div>
+                            <p class="text-[16px] font-bold">$216.66</p>
+                        </div>
+                        <p class="text-red-500 font-bold">-0.51%</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-[100%] border p-4 border-gray-300 rounded-md lg:w-[50%] md:w-[80%] sm:w-[80%]">
+                <div class="w-full flex flex-row justify-between items-center">
+                    <a class="font-bold cursor-pointer">News</a>
+                    <a class="cursor-pointer">View All News</a>
+                </div>
+                <ul class="flex flex-col gap-3 mt-4">
+                    <li>
+                        <p>Bitcoin(BTC) Drops Below 91,000 USDT with a Narrowed 0.29% Increase in 24 Hours</p>
+                    </li>
+                    <li>
+                        <p>BNB Surpasses 630 USDT with a 2.73% Increase in 24 Hours</p>
+                    </li>
+                    <li>
+                        <p>Global Bitcoin Race Among Nations Intensifies, Says Anthony Pompliano</p>
+                    </li>
+                    <li>
+                        <p>BlackRock's Bitcoin ETF Reaches $40 Billion in Record Time</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-center flex-col items-center py-[80px] max-md:text-center">
+            <h1 class="text-4xl text-[#6c07c4] max-md:text-2xl">Deposits & Withdrawals</h1>
+            <button class="px-[50px] py-2 bg-[#ee3900] text-white hover:bg-[#ee3900] rounded-sm mt-[30px]">Open
+                Account</button>
+        </div>
+        <div class="flex justify-between items-center px-[100px] max-lg:px-[50px] max-md:px-0 max-sm:px-0 py-5">
+            <div class="w-[256px] flex flex-col items-center px-[16px]">
+                <img src="assets/images/icon.png" alt="deposit" />
+                <p class="text-[16px] font-bold text-[#4a4a4a] mt-1">Advanced Platform</p>
+                <p class="text-[14px] text-center mt-2">Desktop Windows / MacOs / Web / Mobile</p>
+                <a class="text-[#ff5722] mt-1">Download App</a>
+            </div>
+
+            <div class="w-[256px] flex flex-col items-center px-[16px]">
+                <img src="assets/images/icon.png" alt="icon" />
+                <p class="text-[16px] font-bold text-[#4a4a4a] mt-1">Advanced Platform</p>
+                <p class="text-[14px] text-center mt-2">Desktop Windows / MacOs / Web / Mobile</p>
+                <a class="text-[#ff5722] mt-1">Download App</a>
+            </div>
+
+            <div class="w-[256px] flex flex-col items-center px-[16px]">
+                <img src="assets/images/icon.png" alt="deposit" />
+                <p class="text-[16px] font-bold text-[#4a4a4a] mt-1">Advanced Platform</p>
+                <p class="text-[14px] text-center mt-2">Desktop Windows / MacOs / Web / Mobile</p>
+                <a class="text-[#ff5722] mt-1">Download App</a>
+            </div>
+        </div>
+        <div class="flex flex-col py-5 w-full relative min-h-[380px] px-3">
+            <div class="flex flex-col w-[50%] max-lg:w-[40%] max-md:w-[100%] max-md:items-center max-md:text-center">
+                <h1 class="text-[30px] text-[#6c07c4] max-md:text-2xl">Enjoy the ultimate platform</h1>
+                <span class="mt-2 w-[100%]">A multichart layout, technical analysis, historical quotes and
+                    beyond. Everything you're looking for in a platform — on the device of your choice.</span>
+            </div>
+            <div class="max-md:block hidden mt-4">
+                <img src="assets/images/pc.webp" class="w-[580px]" alt="banner" />
+            </div>
+            <div class="flex flex-row gap-2 mt-[100px] max-md:justify-center max-md:mt-[20px]">
+                <button class="px-[50px] py-2 bg-[#ee3900] text-white hover:bg-[#ee3900] rounded-sm">Open
+                    Account</button>
+                <button class="px-[50px] py-2 bg-[#ee3900] text-white hover:bg-[#ee3900] rounded-sm">Download
+                    App</button>
+            </div>
+            <div class="absolute right-0 max-md:hidden">
+                <img src="assets/images/pc.webp" class="w-[480px]" alt="banner" />
+            </div>
+        </div>
+
+        <div class="flex flex-col py-5 w-full">
+            <h1 class="text-4xl text-[#6c07c4] text-center">Features</h1>
+            <div class="flex justify-center items-center gap-4 mt-4 max-md:flex-col flex-row ">
+                <div class="w-[50%] max-md:w-[100%]">
+                    <p class="text-[30px] text-[#6c07c4]">Analysis & Alerts</p>
+                    <p>Get the most out of fundamental and technical analysis with our News Feed and Economic Calendars.
+                        More than 100 most widely used technical indicators and widgets. Always stay up-to-date on what
+                        is happening in the financial markets with our customizable price alerts.
+                    </p>
+                </div>
+                <div class="w-[50%] max-md:w-[100%]">
+                    <img src="assets/images/alert.webp" alt="deposit" />
+                </div>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-4 mt-4">
+                <div class="w-[50%]">
+                    <img src="assets/images/alert.webp" alt="deposit" />
+                </div>
+                <div class="w-[50%]">
+                    <p class="text-[30px] text-[#6c07c4]">Analysis & Alerts</p>
+                    <p>Get the most out of fundamental and technical analysis with our News Feed and Economic Calendars.
+                        More than 100 most widely used technical indicators and widgets. Always stay up-to-date on what
+                        is happening in the financial markets with our customizable price alerts.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-4 mt-4">
+                <div class="w-[50%]">
+                    <p class="text-[30px] text-[#6c07c4]">Analysis & Alerts</p>
+                    <p>Get the most out of fundamental and technical analysis with our News Feed and Economic Calendars.
+                        More than 100 most widely used technical indicators and widgets. Always stay up-to-date on what
+                        is happening in the financial markets with our customizable price alerts.
+                    </p>
+                </div>
+                <div class="w-[50%]">
+                    <img src="assets/images/alert.webp" alt="deposit" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="w-full h-[100px] bg-[#060642] flex justify-center items-center">
+    <p class="text-white text-center">#Footer</p>
+</footer>

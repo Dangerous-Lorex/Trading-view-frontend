@@ -1,0 +1,173 @@
+<div class="bg-white rounded-md p-3 shadow-lg mt-4 w-full">
+    <div [ngClass]="{'hidden': isPluginSeleted}">
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('original-value')">
+            Original value</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('multi-assets')">
+            Multi assets</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('volumn-calculation')">
+            Volumn Calculation</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('capital-management')">
+            Capital management</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('correlation-analysis')">
+            Correlation Analysis</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('market-analysis')">
+            Market Analysis</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('mean-reversion')">
+            Mean Reversion</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('news-sentiment')">
+            News Sentiment</h2>
+        <h2 class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer"
+            (click)="selectPlugin('risk-reward-ratio')">
+            Rist Reward ratio</h2>
+    </div>
+    <div [ngClass]="{'block': isPluginSeleted == 'original-value', 'hidden': isPluginSeleted != 'original-value'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <div class="bg-white rounded-md p-3">
+            <form class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-2">
+                <div>
+                    <label class="text-sm font-bold mt-1">Available Data Providers</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Data Provider</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Display time</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">!isActive</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">!isSelected</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Key</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Latest Time Stamp</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Normalized Value</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Selected Asset</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Selected Data Provider</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Title</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+                <div>
+                    <label class="text-sm font-bold mt-1">Weight</label>
+                    <input type="text" class="form-control text-sm py-[2px]" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div [ngClass]="{'block': isPluginSeleted == 'multi-assets', 'hidden': isPluginSeleted != 'multi-assets'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div
+        [ngClass]="{'block': isPluginSeleted == 'volumn-calculation', 'hidden': isPluginSeleted != 'volumn-calculation'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div
+        [ngClass]="{'block': isPluginSeleted == 'capital-management', 'hidden': isPluginSeleted != 'capital-management'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div
+        [ngClass]="{'block': isPluginSeleted == 'correlation-analysis', 'hidden': isPluginSeleted != 'correlation-analysis'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div [ngClass]="{'block': isPluginSeleted == 'market-analysis', 'hidden': isPluginSeleted != 'market-analysis'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div [ngClass]="{'block': isPluginSeleted == 'mean-reversion', 'hidden': isPluginSeleted != 'mean-reversion'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div [ngClass]="{'block': isPluginSeleted == 'news-sentiment', 'hidden': isPluginSeleted != 'news-sentiment'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+
+    <div
+        [ngClass]="{'block': isPluginSeleted == 'risk-reward-ratio', 'hidden': isPluginSeleted != 'risk-reward-ratio'}">
+        <button class="flex flex-row gap-1 items-center" (click)="selectPlugin('')">
+            <img src="assets/img/back.svg" alt="back" class="w-4 h-4">
+            Back
+        </button>
+        <h2
+            class="text-sm shadow-md rounded-md py-2 px-3 bg-primary-subtle mt-2 hover:bg-gray-200 active:bg-gray-400 cursor-pointer">
+            {{isPluginSeleted}}</h2>
+    </div>
+</div>
